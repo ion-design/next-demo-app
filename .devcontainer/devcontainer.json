@@ -1,23 +1,26 @@
 {
-    "name": "Ion Preview",
-    "image": "mcr.microsoft.com/devcontainers/typescript-node:18",
+    "image": "mcr.microsoft.com/devcontainers/universal:2",
     "hostRequirements": {
-        "cpus": 4
+      "cpus": 4
     },
-    "forwardPorts": [3000],
-    "postCreateCommand": "npm install && npm run dev",
+    "waitFor": "onCreateCommand",
+    "updateContentCommand": "npm install && npm run build",
+    "postCreateCommand": "",
+    "postAttachCommand": {
+      "server": "npm run dev"
+    },
     "customizations": {
       "codespaces": {
-        "openFiles": ["src/App.tsx"]
+        "openFiles": [
+          "pages/index.js"
+        ]
       }
     },
     "portsAttributes": {
-        "3000": {
+      "3000": {
         "label": "Application",
         "onAutoForward": "openPreview"
-        }
+      }
     },
-    "features": {
-      "ghcr.io/devcontainers/features/node:1": {}
-    }
+    "forwardPorts": [3000]
 }
