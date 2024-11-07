@@ -1,0 +1,23 @@
+{
+    "name": "Ion Preview",
+    "image": "mcr.microsoft.com/devcontainers/typescript-node:18",
+    "hostRequirements": {
+        "cpus": 4
+    },
+    "forwardPorts": [3000],
+    "postCreateCommand": "npm install && npm run dev",
+    "customizations": {
+      "codespaces": {
+        "openFiles": ["src/App.tsx"]
+      }
+    },
+    "portsAttributes": {
+        "3000": {
+        "label": "Application",
+        "onAutoForward": "openPreview"
+        }
+    },
+    "features": {
+      "ghcr.io/devcontainers/features/node:1": {}
+    }
+}
