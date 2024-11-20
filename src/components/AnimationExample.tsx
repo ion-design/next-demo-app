@@ -1,3 +1,4 @@
+
 // Generated with Ion on 10/30/2024, 5:52:49 PM
 // Figma Link: https://www.figma.com/design/BsgE00bYWTmwm4RY0WmYN6?node-id=78:2941
 "use client";
@@ -8,7 +9,6 @@ import Button from "@/components/Button";
 import Input from "@/components/Input";
 import Checkbox from "@/components/ion/Checkbox";
 import NumberInput from "@/components/ion/NumberInput";
-import { RadioGroup, RadioGroupItem as Radio } from "@/components/ion/Radio";
 
 function AnimationExample() {
   const [members, setMembers] = useState<number | string | undefined>(
@@ -29,7 +29,7 @@ function AnimationExample() {
 
   return (
     <div className="bg-background w-[500px] relative flex flex-col justify-center items-center rounded-radius-sm shadow-[0_4px_4px_0_rgba(0,0,0,0.25)]">
-      <div className="w-full flex flex-col gap-5 px-10 py-5">
+      <div className="w-full flex flex-col gap-8 px-10 py-5">
         <div className="text-2xl font-semibold text-foreground">
           Project Details
         </div>
@@ -77,19 +77,8 @@ function AnimationExample() {
             <Checkbox label="Developers" />
           </div>
         </div>
-        <div className="w-full flex flex-col gap-3">
-          <div className="text-sm font-semibold text-foreground">
-            In the following Sectors:
-          </div>
-          <RadioGroup orientation="horizontal">
-            <div className="w-full flex items-start gap-5">
-              <Radio label="All" value="All" />
-              <Radio label="Select sectors" value="Select sectors" />
-            </div>
-          </RadioGroup>
-        </div>
       </div>
-      <div className="bg-disabled w-full flex justify-between items-center gap-5 px-10 py-5">
+      <div className="bg-disabled w-full flex justify-between items-center gap-5 px-10 py-8">
         <Button
           variant="outline"
           color="neutral"
@@ -119,3 +108,4 @@ function AnimationExample() {
   );
 }
 export default AnimationExample;
+
